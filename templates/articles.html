@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block title %}Artikel - Kantor Hukum Arman Telaumbanua{% endblock %}
+{% block meta_description %}Baca artikel-artikel hukum terbaru dan tips-tips dari Kantor Hukum Arman Telaumbanua.{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header" style="background-image: url('{{ url_for('static', filename='img/bg.jpg') }}');">
+    <div class="page-header-overlay"></div>
+    <div class="container h-100">
+        <div class="row h-100 align-items-center justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h1 class="page-title">Artikel Hukum</h1>
+                <p class="page-subtitle">Informasi dan tips hukum terpercaya</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Articles Section -->
+<section class="articles-section py-5">
+    <div class="container">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title">Artikel Terbaru</h2>
+            <div class="title-underline"></div>
+            <p class="section-subtitle">Baca tips dan panduan hukum dari para ahli kami</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="row justify-content-center mb-5" data-aos="fade-up">
+            <div class="col-lg-6">
+                <div class="search-box glass">
+                    <input type="text" class="form-control" id="searchArticles" placeholder="Cari artikel...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Articles Grid -->
+        <div class="row g-4" id="articlesGrid">
+            {% for article in articles %}
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
+                <div class="article-card glass">
+                    <div class="article-image-wrapper">
+                        <img src="{{ article.thumbnail }}" alt="{{ article.title }}" class="article-image">
+                        <div class="article-category">{{ article.category }}</div>
+                        <div class="article-overlay">
+                            <a href="#" class="article-read-more">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">
+                                <i class="fas fa-calendar me-1"></i>{{ article.date }}
+                            </span>
+                            <span class="article-author">
+                                <i class="fas fa-user me-1"></i>{{ article.author }}
+                            </span>
+                        </div>
+                        <h4 class="article-title">{{ article.title }}</h4>
+                        <p class="article-excerpt">{{ article.excerpt }}</p>
+                        <a href="#" class="read-more-link">Baca Selengkapnya <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Pagination -->
+        <div class="row mt-5">
+            <div class="col-12 text-center" data-aos="fade-up">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item active">
+                            <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Berikutnya</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Subscribe Section -->
+<section class="subscribe-section py-5 bg-dark">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 text-center" data-aos="zoom-in">
+                <div class="glass p-5 rounded-3">
+                    <h3 class="mb-3">Dapatkan Update Artikel Terbaru</h3>
+                    <p class="mb-4">Berlangganan newsletter kami untuk mendapatkan tips dan panduan hukum terbaru langsung ke email Anda</p>
+                    <form class="subscribe-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Masukkan email Anda">
+                            <button class="btn btn-gold" type="submit">Langganan</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchArticles');
+    const articlesGrid = document.getElementById('articlesGrid');
+    const articleCards = articlesGrid.querySelectorAll('.col-lg-6');
+    
+    searchInput.addEventListener('keyup', function() {
+        const searchTerm = this.value.toLowerCase();
+        
+        articleCards.forEach(card => {
+            const title = card.querySelector('.article-title').textContent.toLowerCase();
+            const category = card.querySelector('.article-category').textContent.toLowerCase();
+            
+            if (title.includes(searchTerm) || category.includes(searchTerm)) {
+                card.style.display = '';
+                setTimeout(() => card.classList.add('show'), 10);
+            } else {
+                card.style.display = 'none';
+                card.classList.remove('show');
+            }
+        });
+    });
+});
+</script>
+{% endblock %}

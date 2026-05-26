@@ -1,0 +1,466 @@
+{% extends "base.html" %}
+
+{% block title %}Konsultasi - Kantor Hukum Arman Telaumbanua{% endblock %}
+{% block meta_description %}Jadwalkan konsultasi hukum profesional dengan Kantor Hukum Arman Telaumbanua untuk menyelesaikan masalah hukum Anda.{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header" style="background-image: url('{{ url_for('static', filename='img/bg.jpg') }}');">
+    <div class="page-header-overlay"></div>
+    <div class="container h-100">
+        <div class="row h-100 align-items-center justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h1 class="page-title">Jadwalkan Konsultasi</h1>
+                <p class="page-subtitle">Konsultasi gratis dengan ahli hukum kami</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Consultation Info -->
+<section class="consultation-info py-5">
+    <div class="container">
+        <div class="row g-4 mb-5">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="info-card glass text-center">
+                    <div class="info-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h5 class="mt-3">Konsultasi Gratis</h5>
+                    <p>Dapatkan konsultasi awal secara gratis tanpa biaya apapun</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="info-card glass text-center">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h5 class="mt-3">Fleksibel Waktu</h5>
+                    <p>Pilih waktu yang paling sesuai dengan jadwal Anda</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="info-card glass text-center">
+                    <div class="info-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h5 class="mt-3">Privasi Terjamin</h5>
+                    <p>Kerahasiaan data Anda dijamin sepenuhnya</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Consultation Form Section -->
+<div class="col-lg-8 mx-auto" data-aos="fade-left">
+    <form id="consultationForm" class="glass p-5 rounded-3">
+        <h4 class="mb-4">Form Konsultasi</h4>
+
+        <!-- Nama -->
+        <div class="form-group mb-3">
+            <label for="fullName" class="form-label">
+                Nama Lengkap
+            </label>
+
+            <input type="text"
+                   class="form-control"
+                   id="fullName"
+                   required>
+        </div>
+
+        <!-- Alamat -->
+        <div class="form-group mb-3">
+            <label for="alamat" class="form-label">
+                Alamat Lengkap
+            </label>
+
+            <textarea class="form-control"
+                      id="alamat"
+                      rows="3"
+                      placeholder="Masukkan alamat lengkap..."
+                      required></textarea>
+        </div>
+
+        <!-- Jenis Layanan -->
+        <div class="form-group mb-3">
+            <label for="serviceType" class="form-label">
+                Jenis Layanan Hukum
+            </label>
+
+            <select class="form-select"
+                    id="serviceType"
+                    required>
+
+                <option value="">
+                    -- Pilih Jenis Layanan --
+                </option>
+
+                <option value="Hukum Pidana">
+                    Hukum Pidana
+                </option>
+
+                <option value="Hukum Perdata">
+                    Hukum Perdata
+                </option>
+
+                <option value="Hukum Keluarga">
+                    Hukum Keluarga
+                </option>
+
+                <option value="Sengketa Tanah & Properti">
+                    Sengketa Tanah & Properti
+                </option>
+
+                <option value="Hak Waris">
+                    Hak Waris
+                </option>
+
+                <option value="Bisnis & Perusahaan">
+                    Bisnis & Perusahaan
+                </option>
+
+                <option value="Perlindungan Konsumen">
+                    Perlindungan Konsumen
+                </option>
+
+                <option value="Konsultasi Umum">
+                    Konsultasi Umum
+                </option>
+
+            </select>
+        </div>
+
+        <!-- Tanggal -->
+        <div class="form-group mb-3">
+            <label for="consultationDate" class="form-label">
+                Tanggal Konsultasi
+            </label>
+
+            <input type="date"
+                   class="form-control"
+                   id="consultationDate"
+                   required>
+        </div>
+
+       <!-- Waktu + Hari Konsultasi -->
+        <div class="form-group mb-3">
+            <label for="consultationTime" class="form-label">
+                Jadwal Konsultasi
+            </label>
+
+            <select class="form-select"
+                    id="consultationTime"
+                    required>
+
+                <option value="">
+                    -- Pilih Hari & Waktu --
+                </option>
+
+                <!-- SENIN -->
+                <option value="Senin | 08:00 - 09:00">
+                    Senin | 08:00 - 09:00
+                </option>
+
+                <option value="Senin | 09:00 - 10:00">
+                    Senin | 09:00 - 10:00
+                </option>
+
+                <option value="Senin | 10:00 - 11:00">
+                    Senin | 10:00 - 11:00
+                </option>
+
+                <!-- SELASA -->
+                <option value="Selasa | 08:00 - 09:00">
+                    Selasa | 08:00 - 09:00
+                </option>
+
+                <option value="Selasa | 09:00 - 10:00">
+                    Selasa | 09:00 - 10:00
+                </option>
+
+                <option value="Selasa | 10:00 - 11:00">
+                    Selasa | 10:00 - 11:00
+                </option>
+
+                <!-- RABU -->
+                <option value="Rabu | 08:00 - 09:00">
+                    Rabu | 08:00 - 09:00
+                </option>
+
+                <option value="Rabu | 09:00 - 10:00">
+                    Rabu | 09:00 - 10:00
+                </option>
+
+                <option value="Rabu | 10:00 - 11:00">
+                    Rabu | 10:00 - 11:00
+                </option>
+
+                <!-- KAMIS -->
+                <option value="Kamis | 08:00 - 09:00">
+                    Kamis | 08:00 - 09:00
+                </option>
+
+                <option value="Kamis | 09:00 - 10:00">
+                    Kamis | 09:00 - 10:00
+                </option>
+
+                <option value="Kamis | 10:00 - 11:00">
+                    Kamis | 10:00 - 11:00
+                </option>
+
+                <!-- JUMAT -->
+                <option value="Jumat | 13:00 - 14:00">
+                    Jumat | 13:00 - 14:00
+                </option>
+
+                <option value="Jumat | 14:00 - 15:00">
+                    Jumat | 14:00 - 15:00
+                </option>
+
+                <!-- SABTU -->
+                <option value="Sabtu | 08:00 - 09:00">
+                    Sabtu | 08:00 - 09:00
+                </option>
+
+                <option value="Sabtu | 09:00 - 10:00">
+                    Sabtu | 09:00 - 10:00
+                </option>
+
+                <option value="Sabtu | 10:00 - 11:00">
+                    Sabtu | 10:00 - 11:00
+                </option>
+
+            </select>
+
+            <small class="text-danger">
+                * Hari Minggu Libur
+            </small>
+        </div>
+
+        <!-- Tipe -->
+        <div class="form-group mb-3">
+            <label for="consultationType" class="form-label">
+                Tipe Konsultasi
+            </label>
+
+            <select class="form-select"
+                    id="consultationType"
+                    required>
+
+                <option value="">
+                    -- Pilih Tipe --
+                </option>
+
+                <option value="Offline (Kantor Kami)">
+                    Offline (Kantor Kami)
+                </option>
+
+                <option value="Telepon">
+                    Telepon
+                </option>
+
+                <option value="Video Call">
+                    Video Call
+                </option>
+
+            </select>
+        </div>
+
+        <!-- Deskripsi -->
+        <div class="form-group mb-3">
+            <label for="description" class="form-label">
+                Deskripsi Masalah Hukum
+            </label>
+
+            <textarea class="form-control"
+                      id="description"
+                      rows="4"
+                      placeholder="Jelaskan masalah hukum Anda secara detail..."
+                      required></textarea>
+        </div>
+
+        <!-- Persetujuan -->
+        <div class="form-check mb-3">
+            <input class="form-check-input"
+                   type="checkbox"
+                   id="agreement"
+                   required>
+
+            <label class="form-check-label"
+                   for="agreement">
+
+                Saya setuju dengan syarat dan ketentuan konsultasi hukum
+
+            </label>
+        </div>
+
+        <!-- Tombol -->
+        <button type="submit"
+                class="btn btn-gold w-100">
+
+            <i class="fab fa-whatsapp me-2"></i>
+            Jadwalkan Konsultasi
+
+        </button>
+    </form>
+</div>
+
+<!-- SCRIPT WHATSAPP -->
+<script>
+
+document.getElementById("consultationForm")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    let nama =
+    document.getElementById("fullName").value;
+
+    let alamat =
+    document.getElementById("alamat").value;
+
+    let layanan =
+    document.getElementById("serviceType").value;
+
+    let tanggal =
+    document.getElementById("consultationDate").value;
+
+    let waktu =
+    document.getElementById("consultationTime").value;
+
+    let tipe =
+    document.getElementById("consultationType").value;
+
+    let deskripsi =
+    document.getElementById("description").value;
+
+    let nomorWA = "6285372163887";
+
+    let pesan =
+`Halo Kantor Hukum ARMAN TELAUMBANUA, S.H., M.H.
+
+Saya ingin melakukan konsultasi hukum.
+
+========================
+
+Nama Lengkap:
+${nama}
+
+Alamat:
+${alamat}
+
+Jenis Layanan:
+${layanan}
+
+Tanggal Konsultasi:
+${tanggal}
+
+Waktu Konsultasi:
+${waktu}
+
+Tipe Konsultasi:
+${tipe}
+
+========================
+
+Deskripsi Masalah:
+
+${deskripsi}
+
+Mohon konfirmasi jadwal konsultasi saya.
+
+Terima kasih.`;
+
+    let url =
+    `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
+
+    window.open(url, "_blank");
+
+});
+
+</script>
+
+<!-- Alternative Contact -->
+<section class="alternative-contact py-5">
+    <div class="container">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title">Hubungi Kami Langsung</h2>
+            <div class="title-underline"></div>
+            <p class="section-subtitle">Jika Anda lebih suka menghubungi kami langsung, silakan gunakan informasi kontak di bawah</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+                <div class="glass p-4 text-center rounded-3">
+                    <h5 class="text-gold mb-3">
+                        <i class="fab fa-whatsapp me-2"></i>WhatsApp
+                    </h5>
+                    <p class="mb-3">Chat langsung dengan tim kami melalui WhatsApp</p>
+                    <a href="https://wa.me/6285372163887?text=Halo%20Kantor%20Hukum%20ARMAN%20TELAUMBANUA%2C%20S.H.%2C%20M.H.%20Saya%20ingin%20melakukan%20konsultasi%20hukum." target="_blank" class="btn btn-gold">
+                        <i class="fab fa-whatsapp me-2"></i>+62 853-7216-3887
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="200">
+                <div class="glass p-4 text-center rounded-3">
+                    <h5 class="text-gold mb-3">
+                        <i class="fas fa-phone me-2"></i>Telepon
+                    </h5>
+                    <p class="mb-3">Hubungi kami melalui telepon untuk konsultasi mendesak</p>
+                    <a href="tel:+6285372163887" class="btn btn-gold">
+                        <i class="fas fa-phone me-2"></i>+62 853-7216-3887
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.getElementById('consultationForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = {
+        fullName: document.getElementById('fullName').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        serviceType: document.getElementById('serviceType').value,
+        consultationDate: document.getElementById('consultationDate').value,
+        consultationTime: document.getElementById('consultationTime').value,
+        consultationType: document.getElementById('consultationType').value,
+        description: document.getElementById('description').value
+    };
+    
+    fetch('/api/submit-consultation', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('Jadwal konsultasi berhasil dikirim! Tim kami akan menghubungi Anda segera.');
+            document.getElementById('consultationForm').reset();
+        } else {
+            alert('Terjadi kesalahan. Silakan coba lagi.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Terjadi kesalahan. Silakan coba lagi.');
+    });
+});
+
+// Set minimum date to today
+document.getElementById('consultationDate').setAttribute('min', new Date().toISOString().split('T')[0]);
+</script>
+{% endblock %}

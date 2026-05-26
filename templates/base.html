@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block meta_description %}Kantor Hukum Arman Telaumbanua, S.H., M.H. - Solusi Hukum Profesional, Jujur, dan Terpercaya untuk berbagai kebutuhan hukum Anda.{% endblock %}">
+    <meta name="keywords" content="{% block meta_keywords %}kantor hukum, konsultasi hukum, advokat, hukum pidana, hukum perdata, bandung{% endblock %}">
+    <meta name="author" content="Kantor Hukum Arman Telaumbanua, S.H., M.H.">
+    <meta property="og:title" content="{% block og_title %}Kantor Hukum Arman Telaumbanua, S.H., M.H.{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Solusi Hukum Profesional, Jujur, dan Terpercaya{% endblock %}">
+    <meta property="og:image" content="{{ url_for('static', filename='img/logo.png') }}">
+    <meta property="og:type" content="website">
+    
+    <title>{% block title %}Kantor Hukum Arman Telaumbanua - Solusi Hukum Profesional{% endblock %}</title>
+    
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/logo.png') }}" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <img src="{{ url_for('static', filename='img/logo.jpeg') }}" alt="Logo" class="loading-logo">
+            <p>Memuat...</p>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="{{ url_for('static', filename='img/logo.jpeg') }}" alt="Logo" class="navbar-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/services">Layanan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/articles">Artikel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/testimonials">Testimoni</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Kontak</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-consultation" href="/consultation">Konsultasi</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="row g-4 mb-5">
+                    <!-- Footer Brand -->
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                        <div class="footer-brand">
+                            <img src="{{ url_for('static', filename='img/logo.jpeg') }}" alt="Logo" class="footer-logo">
+                            <h5 class="mt-3 text-gold">Kantor Hukum Arman</h5>
+                            <p class="footer-description">Solusi hukum profesional, jujur, dan terpercaya untuk semua kebutuhan Anda.</p>
+                        </div>
+                    </div>
+
+                  <!-- Quick Links -->
+                    <div class="col-lg-2 col-md-6"
+                        data-aos="fade-up"
+                        data-aos-delay="100">
+
+                        <div class="footer-links">
+
+                            <h5 class="footer-title">Navigasi</h5>
+
+                            <ul class="footer-menu list-unstyled">
+                                <li><a href="/">Beranda</a></li>
+                                <li><a href="/about">Tentang Kami</a></li>
+                                <li><a href="/services">Layanan</a></li>
+                                <li><a href="/articles">Artikel</a></li>
+                                <li><a href="/testimonials">Testimoni</a></li>
+                                <li><a href="/contact">Kontak</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="col-lg-3 col-md-6"
+                        data-aos="fade-up"
+                        data-aos-delay="200">
+
+                        <div class="footer-contact">
+
+                            <h5 class="footer-title">Hubungi Kami</h5>
+
+                            <!-- PHONE -->
+                            <div class="contact-item">
+
+                                <i class="fas fa-phone-alt"></i>
+
+                                <a href="tel:+6285372163887">
+                                    +62 853-7216-3887
+                                </a>
+
+                            </div>
+
+                            <!-- ADDRESS -->
+                            <div class="contact-item align-items-start">
+
+                                <i class="fas fa-map-marker-alt mt-2"></i>
+
+                                <span>
+                                    Buah Batu Regency Blok A-2 No. 1 <br>
+                                    Kujangsari, Kec. Bandung Kidul <br>
+                                    Kota Bandung, Jawa Barat
+                                </span>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="col-lg-3 col-md-6"
+                        data-aos="fade-up"
+                        data-aos-delay="300">
+
+                        <div class="footer-social">
+
+                            <h5 class="footer-title">Ikuti Kami</h5>
+
+                            <div class="social-links">
+
+                                <!-- WhatsApp -->
+                                <a href="https://wa.me/6285372163887?text=Halo%20Kantor%20Hukum%20ARMAN%20TELAUMBANUA%2C%20S.H.%2C%20M.H.%20Saya%20ingin%20melakukan%20konsultasi%20hukum."
+                                class="social-link"
+                                target="_blank"
+                                title="WhatsApp">
+
+                                    <i class="fab fa-whatsapp"></i>
+
+                                </a>
+
+                                <!-- Instagram -->
+                                <a href="https://www.instagram.com/armanlawyer96?igsh=Zzhkb2p4c3EzNzAw"
+                                class="social-link"
+                                target="_blank"
+                                title="Instagram">
+
+                                    <i class="fab fa-instagram"></i>
+
+                                </a>
+
+                                <!-- Facebook -->
+                                <a href="https://www.facebook.com/arman.telaumbanua.92"
+                                class="social-link"
+                                target="_blank"
+                                title="Facebook">
+
+                                    <i class="fab fa-facebook-f"></i>
+
+                                </a>
+
+                                <!-- TikTok -->
+                                <a href="https://www.tiktok.com/@adv_arman?_r=1&_t=ZS-96YowIEQpzp"
+                                class="social-link"
+                                target="_blank"
+                                title="TikTok">
+
+                                    <i class="fab fa-tiktok"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                <!-- Footer Bottom -->
+                <div class="footer-bottom py-4">
+
+                    <div class="divider mb-4"></div>
+
+                    <div class="row align-items-center gy-3">
+
+                        <!-- COPYRIGHT -->
+                        <div class="col-lg-6 text-center text-lg-start">
+
+                            <p class="footer-copy mb-0">
+                                © Kantor Hukum ini didirikan dan dikelola oleh  
+                                <strong>Arman Telaumbanua, S.H., M.H.</strong>
+                                sejak tahun 2022.
+                                <br>
+                                Seluruh hak cipta dan konten dilindungi undang-undang.
+                            </p>
+
+                        </div>
+
+                        <!-- RIGHT TEXT -->
+                        <div class="col-lg-6 text-center text-lg-end">
+
+                            <p class="footer-credit mb-0">
+
+                                Dikembangkan secara profesional oleh
+                                <strong>Tim Web Development</strong>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6285372163887?text=Halo%20Kantor%20Hukum%20ARMAN%20TELAUMBANUA%2C%20S.H.%2C%20M.H.%20Saya%20ingin%20melakukan%20konsultasi%20hukum." class="whatsapp-float" target="_blank" title="Chat WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" title="Kembali ke atas">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

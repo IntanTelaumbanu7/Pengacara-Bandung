@@ -1,0 +1,324 @@
+{% extends "base.html" %}
+
+{% block title %}Beranda - Pengacara Bandung | ATP{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section" id="hero">
+    <div class="hero-background">
+        <canvas id="particle-canvas"></canvas>
+        <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+
+            <!-- KIRI = TEXT -->
+            <div class="col-lg-6">
+                <div class="hero-content">
+
+                    <h1 class="hero-title" id="hero-title">
+                        Pengacara Bandung | ATP
+                    </h1>
+
+                    <p class="hero-subtitle" id="hero-subtitle">
+                        Solusi Hukum Profesional, Jujur, dan Terpercaya
+                    </p>
+
+                    <div class="hero-buttons mt-5">
+                        <a href="/consultation" class="btn btn-gold me-3">
+                            <i class="fas fa-calendar-check me-2"></i>
+                            Konsultasi Sekarang
+                        </a>
+
+                        <a href="https://wa.me/6285372163887?text=Halo%20Kantor%20Hukum%20ARMAN%20TELAUMBANUA%2C%20S.H.%2C%20M.H.%20Saya%20ingin%20melakukan%20konsultasi%20hukum."
+                           target="_blank"
+                           class="btn btn-outline-gold">
+
+                            <i class="fab fa-whatsapp me-2"></i>
+                            Hubungi WhatsApp
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- KANAN = FOTO -->
+            <img src="{{ url_for('static', filename='img/lawyer.jpeg') }}"
+            alt="Logo"
+            class="img-fluid hero-photo">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Quick Stats Section -->
+<section class="quick-stats py-5 bg-dark">
+    <div class="container">
+        <div class="row g-4 text-center">
+            <div class="col-md-3" data-aos="zoom-in">
+                <div class="stat-card">
+                    <h3 class="stat-number text-gold" data-target="50">0</h3>
+                    <p class="stat-label">Tahun Pengalaman</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+                <div class="stat-card">
+                    <h3 class="stat-number text-gold" data-target="2000">0</h3>
+                    <p class="stat-label">Klien Puas</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+                <div class="stat-card">
+                    <h3 class="stat-number text-gold" data-target="1000">0</h3>
+                    <p class="stat-label">Kasus Diselesaikan</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
+                <div class="stat-card">
+                    <h3 class="stat-number text-gold" data-target="98">0</h3>
+                    <p class="stat-label">Tingkat Kesuksesan %</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Services Section -->
+<section class="featured-services py-5">
+    <div class="container">
+
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title">Layanan Unggulan Kami</h2>
+            <div class="title-underline"></div>
+            <p class="section-subtitle">
+                Kami menyediakan berbagai layanan hukum profesional untuk memenuhi kebutuhan Anda
+            </p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="service-card glass">
+                    <div class="service-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h4>Hukum Pidana</h4>
+                    <p>Konsultasi dan pendampingan hukum pidana profesional</p>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="service-card glass">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4>Hukum Perdata</h4>
+                    <p>Penanganan sengketa perdata dengan efisien</p>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="service-card glass">
+                    <div class="service-icon">
+                        <i class="fas fa-heart-crack"></i>
+                    </div>
+                    <h4>Hukum Keluarga</h4>
+                    <p>Penanganan masalah perceraian dan keluarga</p>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="service-card glass">
+                    <div class="service-icon">
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <h4>Sengketa Tanah</h4>
+                    <p>Penyelesaian sengketa properti dan tanah</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="/services" class="btn btn-gold px-5 py-3">
+                Lihat Semua Layanan
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="why-choose-us py-5 bg-dark">
+    <div class="container">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title">Mengapa Memilih Kami?</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        <div class="row g-4 align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="why-choose-image">
+                    <div class="glass-card p-4">
+                        <img src="{{ url_for('static', filename='img/logo.jpeg') }}" alt="Kantor Hukum" class="img-fluid rounded-3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="why-choose-content">
+                    <div class="why-item mb-4">
+                        <div class="why-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="why-text">
+                            <h5>Profesional Bersertifikat</h5>
+                            <p>Tim ahli dengan sertifikasi internasional dan pengalaman bertahun-tahun</p>
+                        </div>
+                    </div>
+
+                    <div class="why-item mb-4">
+                        <div class="why-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="why-text">
+                            <h5>Solusi Cepat & Efisien</h5>
+                            <p>Penyelesaian kasus yang cepat dengan strategi hukum yang tepat</p>
+                        </div>
+                    </div>
+
+                    <div class="why-item mb-4">
+                        <div class="why-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="why-text">
+                            <h5>Terpercaya & Etis</h5>
+                            <p>Menjunjung tinggi etika profesi dan kerahasiaan klien</p>
+                        </div>
+                    </div>
+
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="why-text">
+                            <h5>Layanan 24/7</h5>
+                            <p>Siap membantu Anda kapan saja untuk konsultasi mendesak</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Google Reviews Section -->
+<section class="google-reviews py-5 bg-dark">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <h2 class="section-title">Ulasan Klien Kami</h2>
+            <div class="title-underline"></div>
+            <p class="section-subtitle">
+                Lihat pengalaman klien yang pernah berkonsultasi di Kantor Hukum ARMAN
+            </p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-4 col-md-6">
+                <div class="review-card glass">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"Pelayanan konsultasi hukumnya sangat membantu, jelas, dan profesional."</p>
+                    <h5>Klien Google Maps</h5>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="review-card glass">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"Respon cepat dan penjelasan mudah dipahami. Sangat direkomendasikan."</p>
+                    <h5>Klien Google Maps</h5>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="review-card glass">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"Kantor hukum terpercaya untuk konsultasi dan pendampingan masalah hukum."</p>
+                    <h5>Klien Google Maps</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="https://share.google/LQu6VPqYv04MUv7RL" 
+               target="_blank" 
+               class="btn btn-gold">
+                <i class="fab fa-google me-2"></i>
+                Lihat Semua Ulasan di Google Maps
+            </a>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Typing effect untuk hero title
+document.addEventListener('DOMContentLoaded', function() {
+    const titleElement = document.getElementById('hero-title');
+    const originalText = titleElement.textContent;
+    titleElement.textContent = '';
+    
+    let index = 0;
+    const speed = 50;
+    
+    function type() {
+        if (index < originalText.length) {
+            titleElement.textContent += originalText.charAt(index);
+            index++;
+            setTimeout(type, speed);
+        }
+    }
+    
+    setTimeout(type, 500);
+});
+
+// Animated counter
+const observerOptions = {
+    threshold: 0.5
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                let current = 0;
+                const increment = target / 50;
+                
+                const updateCounter = () => {
+                    if (current < target) {
+                        current += increment;
+                        counter.textContent = Math.floor(current);
+                        setTimeout(updateCounter, 50);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                updateCounter();
+            });
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+const statsSection = document.querySelector('.quick-stats');
+if (statsSection) {
+    observer.observe(statsSection);
+}
+</script>
+{% endblock %}
