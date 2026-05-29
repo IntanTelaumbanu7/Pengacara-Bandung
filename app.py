@@ -9,7 +9,7 @@ app.config['SECRET_KEY'] = 'your-secret-key-change-in-production'
 # =========================
 @app.route('/sitemap.xml')
 def sitemap():
-    return send_from_directory('static', 'sitemap.xml')
+    return send_from_directory('.', 'sitemap.xml', mimetype='application/xml')
 
 
 # =========================
