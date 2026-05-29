@@ -4,12 +4,14 @@
 {% block meta_description %}Baca testimoni klien kami yang telah merasakan manfaat layanan hukum profesional dari Kantor Hukum Arman.{% endblock %}
 
 {% block content %}
+
 <!-- Page Header -->
-<section class="page-header" style="background-image: url('{{ url_for('static', filename='img/bg.jpg') }}');">
+<section class="page-header" style="background-image: url('{{ url_for('static', filename='img/lawyer.jpeg') }}');">
     <div class="page-header-overlay"></div>
-    <div class="container h-100">
-        <div class="row h-100 align-items-center justify-content-center">
-            <div class="col-lg-8 text-center">
+
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-8 col-12 text-center">
                 <h1 class="page-title">Testimoni Klien</h1>
                 <p class="page-subtitle">Kepuasan klien adalah prioritas kami</p>
             </div>
@@ -20,20 +22,31 @@
 <!-- Testimonials Section -->
 <section class="testimonials-section py-5">
     <div class="container">
+
         <div class="section-header text-center mb-5" data-aos="fade-up">
             <h2 class="section-title">Apa Kata Klien Kami?</h2>
             <div class="title-underline"></div>
-            <p class="section-subtitle">Dengarkan pengalaman klien kami yang telah mempercayai layanan kami</p>
+            <p class="section-subtitle">
+                Dengarkan pengalaman klien yang telah mempercayai layanan kami.
+            </p>
         </div>
 
         <!-- Testimonials Carousel -->
-        <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="testimonialsCarousel"
+             class="carousel slide"
+             data-bs-ride="carousel"
+             data-bs-touch="true">
+
             <div class="carousel-inner">
+
                 {% for testimonial in testimonials %}
-                <div class="carousel-item {% if loop.index == 1 %}active{% endif %}" data-aos="fade-up">
+
+                <div class="carousel-item {% if loop.index == 1 %}active{% endif %}">
                     <div class="row justify-content-center">
-                        <div class="col-lg-8">
+                        <div class="col-lg-8 col-md-10 col-12">
+
                             <div class="testimonial-card glass">
+
                                 <div class="testimonial-header mb-4">
                                     <div class="testimonial-stars">
                                         {% for i in range(testimonial.rating) %}
@@ -42,118 +55,281 @@
                                     </div>
                                 </div>
 
-                                <p class="testimonial-content">{{ testimonial.content }}</p>
+                                <p class="testimonial-content">
+                                    {{ testimonial.content }}
+                                </p>
 
                                 <div class="testimonial-author mt-4">
-                                    <div class="author-info">
-                                        <h5 class="author-name">{{ testimonial.name }}</h5>
-                                        <p class="author-position">{{ testimonial.position }}</p>
-                                        <p class="author-company">{{ testimonial.company }}</p>
+                                    <div class="author-info text-center">
+                                        <h5 class="author-name">
+                                            {{ testimonial.name }}
+                                        </h5>
+
+                                        <p class="author-position">
+                                            {{ testimonial.position }}
+                                        </p>
+
+                                        <p class="author-company">
+                                            {{ testimonial.company }}
+                                        </p>
                                     </div>
                                 </div>
+
                             </div>
+
                         </div>
                     </div>
                 </div>
+
                 {% endfor %}
+
             </div>
 
-            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
-                <i class="fas fa-chevron-right"></i>
+            <!-- Controls -->
+            <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#testimonialsCarousel"
+                    data-bs-slide="prev">
+                <span class="testimonial-control">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
             </button>
 
-            <div class="carousel-indicators mt-4">
+            <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#testimonialsCarousel"
+                    data-bs-slide="next">
+                <span class="testimonial-control">
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+            </button>
+
+            <!-- Indicators -->
+            <div class="carousel-indicators testimonial-indicators">
                 {% for testimonial in testimonials %}
-                <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="{{ loop.index0 }}" {% if loop.index == 1 %}class="active"{% endif %}></button>
+                <button type="button"
+                        data-bs-target="#testimonialsCarousel"
+                        data-bs-slide-to="{{ loop.index0 }}"
+                        {% if loop.index == 1 %}class="active"{% endif %}
+                        aria-label="Slide {{ loop.index }}">
+                </button>
                 {% endfor %}
             </div>
+
         </div>
+
     </div>
 </section>
 
 <!-- Grid Testimonials -->
 <section class="testimonials-grid-section py-5 bg-dark">
     <div class="container">
+
         <div class="section-header text-center mb-5" data-aos="fade-up">
             <h2 class="section-title">Pengalaman Klien Kami</h2>
             <div class="title-underline"></div>
+            <p class="section-subtitle">
+                Beberapa pengalaman klien yang telah menggunakan layanan hukum kami.
+            </p>
         </div>
 
         <div class="row g-4">
+
             {% for testimonial in testimonials %}
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
-                <div class="testimonial-grid-card glass">
+
+            <div class="col-lg-6 col-md-6 col-12"
+                 data-aos="fade-up"
+                 data-aos-delay="{{ loop.index0 * 80 }}">
+
+                <div class="testimonial-grid-card glass h-100">
+
                     <div class="testimonial-quote">
                         <i class="fas fa-quote-left text-gold"></i>
                     </div>
-                    <p class="testimonial-text">{{ testimonial.content }}</p>
+
+                    <p class="testimonial-text">
+                        {{ testimonial.content }}
+                    </p>
+
                     <div class="testimonial-rating mb-3">
                         {% for i in range(testimonial.rating) %}
                         <i class="fas fa-star text-gold"></i>
                         {% endfor %}
                     </div>
+
                     <div class="testimonial-person">
                         <div>
-                            <h5 class="mb-0">{{ testimonial.name }}</h5>
-                            <p class="mb-0 small text-muted">{{ testimonial.position }} - {{ testimonial.company }}</p>
+                            <h5 class="mb-1">
+                                {{ testimonial.name }}
+                            </h5>
+
+                            <p class="mb-0 small text-muted">
+                                {{ testimonial.position }} - {{ testimonial.company }}
+                            </p>
                         </div>
                     </div>
+
                 </div>
+
             </div>
+
             {% endfor %}
+
         </div>
+
     </div>
 </section>
 
 <!-- Stats Section -->
 <section class="stats-section py-5">
     <div class="container">
+
         <div class="row g-4 text-center">
-            <div class="col-md-3" data-aos="zoom-in">
-                <div class="stat-box glass">
+
+            <div class="col-lg-3 col-md-6 col-12" data-aos="zoom-in">
+                <div class="stat-box glass h-100">
                     <h3 class="stat-value text-gold">500+</h3>
                     <p class="stat-label">Klien Puas</p>
                 </div>
             </div>
-            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
-                <div class="stat-box glass">
-                    <h3 class="stat-value text-gold">25000+</h3>
+
+            <div class="col-lg-3 col-md-6 col-12" data-aos="zoom-in" data-aos-delay="100">
+                <div class="stat-box glass h-100">
+                    <h3 class="stat-value text-gold">25.000+</h3>
                     <p class="stat-label">Kasus Ditangani</p>
                 </div>
             </div>
-            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
-                <div class="stat-box glass">
+
+            <div class="col-lg-3 col-md-6 col-12" data-aos="zoom-in" data-aos-delay="200">
+                <div class="stat-box glass h-100">
                     <h3 class="stat-value text-gold">95%</h3>
                     <p class="stat-label">Tingkat Kepuasan</p>
                 </div>
             </div>
-            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
-                <div class="stat-box glass">
+
+            <div class="col-lg-3 col-md-6 col-12" data-aos="zoom-in" data-aos-delay="300">
+                <div class="stat-box glass h-100">
                     <h3 class="stat-value text-gold">15+</h3>
                     <p class="stat-label">Tahun Pengalaman</p>
                 </div>
             </div>
+
         </div>
+
     </div>
 </section>
 
 <!-- CTA Section -->
 <section class="cta-section py-5 bg-dark">
     <div class="container">
+
         <div class="text-center" data-aos="zoom-in">
-            <h2 class="cta-title">Jadilah Bagian dari Klien Puas Kami</h2>
-            <p class="cta-subtitle mb-5">Percayakan masalah hukum Anda kepada kami dan rasakan perbedaannya</p>
-            <a href="/consultation" class="btn btn-gold btn-lg me-3">
-                <i class="fas fa-calendar-check me-2"></i>Konsultasi Gratis
-            </a>
-            <a href="https://wa.me/6285372163887?text=Halo%20Kantor%20Hukum%20ARMAN%20TELAUMBANUA%2C%20S.H.%2C%20M.H.%20Saya%20ingin%20melakukan%20konsultasi%20hukum." target="_blank" class="btn btn-outline-gold btn-lg">
-                <i class="fab fa-whatsapp me-2"></i>Hubungi Kami
-            </a>
+
+            <h2 class="cta-title">
+                Jadilah Bagian dari Klien Puas Kami
+            </h2>
+
+            <p class="cta-subtitle mb-4">
+                Percayakan masalah hukum Anda kepada kami dan rasakan perbedaannya.
+            </p>
+
+            <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
+
+                <a href="/consultation"
+                   class="btn btn-gold btn-lg">
+
+                    <i class="fas fa-calendar-check me-2"></i>
+                    Konsultasi Gratis
+
+                </a>
+
+                <a href="https://wa.me/6285372163887?text=Halo%20Kantor%20Hukum%20ARMAN%20TELAUMBANUA%2C%20S.H.%2C%20M.H.%20Saya%20ingin%20melakukan%20konsultasi%20hukum."
+                   target="_blank"
+                   class="btn btn-outline-gold btn-lg">
+
+                    <i class="fab fa-whatsapp me-2"></i>
+                    Hubungi Kami
+
+                </a>
+
+            </div>
+
         </div>
+
     </div>
 </section>
+
+<style>
+.testimonial-control {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.9);
+    color: #0a0e27;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-indicators {
+    position: relative;
+    margin-top: 24px;
+}
+
+.testimonial-grid-card,
+.stat-box {
+    border-radius: 18px;
+}
+
+.testimonial-text {
+    line-height: 1.7;
+}
+
+.testimonial-person h5 {
+    color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        padding: 28px 20px;
+    }
+
+    .testimonial-content {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin: 1.5rem 0;
+    }
+
+    .testimonial-stars i,
+    .testimonial-rating i {
+        font-size: 0.95rem;
+    }
+
+    .testimonial-grid-card {
+        padding: 24px 18px;
+    }
+
+    .testimonial-quote {
+        font-size: 1.6rem;
+    }
+
+    .testimonial-text {
+        font-size: 0.93rem;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+
+    .stat-value {
+        font-size: 2rem;
+    }
+
+    .cta-section .btn {
+        width: 100%;
+    }
+}
+</style>
 
 {% endblock %}
