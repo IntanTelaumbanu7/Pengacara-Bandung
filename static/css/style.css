@@ -2169,3 +2169,632 @@ body {
         font-size: 0.88rem;
     }
 }
+
+/* ==========================================================
+   FINAL RESPONSIVE FIX - MOBILE & DESKTOP SAFE
+   Tambahkan bagian ini di PALING BAWAH style.css
+   ========================================================== */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    overflow-x: hidden;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.hero-section .row {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-photo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 992px) {
+    #navbar {
+        background-color: rgba(10, 14, 39, 0.97) !important;
+        padding: 0.65rem 0 !important;
+    }
+
+    .navbar-logo {
+        height: 42px !important;
+        margin-left: 8px !important;
+    }
+
+    .navbar-collapse {
+        background: rgba(10, 14, 39, 0.98) !important;
+        margin-top: 12px !important;
+        padding: 14px !important;
+        border-radius: 16px !important;
+        border: 1px solid rgba(212, 175, 55, 0.22) !important;
+    }
+
+    .navbar-nav .nav-link {
+        margin: 0 !important;
+        padding: 10px 0 !important;
+        text-align: center !important;
+    }
+
+    .navbar-nav .nav-link::after {
+        display: none !important;
+    }
+
+    .btn-consultation {
+        width: 100% !important;
+        margin-top: 10px !important;
+        border-radius: 14px !important;
+    }
+
+    .hero-section {
+        min-height: auto !important;
+        margin-top: 0 !important;
+        padding: 105px 0 55px !important;
+        text-align: center !important;
+    }
+
+    .hero-section .container {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+
+    .hero-section .row {
+        min-height: auto !important;
+        row-gap: 28px !important;
+    }
+
+    .hero-content {
+        text-align: center !important;
+    }
+
+    .hero-title {
+        font-size: 2rem !important;
+        line-height: 1.25 !important;
+        letter-spacing: 0.5px !important;
+        margin-bottom: 14px !important;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem !important;
+        line-height: 1.55 !important;
+        margin-bottom: 22px !important;
+    }
+
+    .hero-buttons {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        margin-top: 22px !important;
+    }
+
+    .hero-buttons .btn {
+        width: 100% !important;
+        max-width: 420px !important;
+        margin: 0 auto !important;
+        padding: 13px 18px !important;
+        border-radius: 16px !important;
+        font-size: 0.96rem !important;
+    }
+
+    .hero-photo {
+        width: 100% !important;
+        max-width: 380px !important;
+        max-height: 420px !important;
+        object-fit: cover !important;
+        margin: 18px auto 0 !important;
+        border-radius: 20px !important;
+    }
+
+    .hero-background,
+    .page-header {
+        background-attachment: scroll !important;
+    }
+
+    .hero-scroll {
+        display: none !important;
+    }
+
+    .page-header {
+        min-height: 220px !important;
+        margin-top: 65px !important;
+        padding: 45px 15px !important;
+    }
+
+    .page-title {
+        font-size: 2rem !important;
+        line-height: 1.25 !important;
+    }
+
+    .page-subtitle {
+        font-size: 1rem !important;
+        line-height: 1.55 !important;
+    }
+
+    .section-title {
+        font-size: 1.85rem !important;
+        line-height: 1.3 !important;
+    }
+
+    .section-subtitle {
+        font-size: 0.98rem !important;
+        line-height: 1.7 !important;
+    }
+
+    .quick-stats {
+        padding: 45px 0 !important;
+    }
+
+    .quick-stats .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .stat-card,
+    .stat-box {
+        padding: 26px 18px !important;
+        border-radius: 18px !important;
+    }
+
+    .stat-number,
+    .stat-value {
+        font-size: 2rem !important;
+    }
+
+    .service-card,
+    .service-detailed-card,
+    .contact-info-card,
+    .info-card,
+    .value-card,
+    .vision-mission-card,
+    .review-card,
+    .testimonial-card,
+    .testimonial-grid-card {
+        border-radius: 18px !important;
+        margin-bottom: 18px !important;
+    }
+
+    .service-card {
+        min-height: auto !important;
+        padding: 26px 20px !important;
+        text-align: center !important;
+    }
+
+    .service-card-img {
+        height: 200px !important;
+        object-fit: cover !important;
+        border-radius: 16px 16px 0 0 !important;
+    }
+
+    .service-detailed-content {
+        padding: 18px !important;
+    }
+
+    .article-image-wrapper {
+        height: 210px !important;
+    }
+
+    .cta-section {
+        padding: 40px 20px !important;
+        text-align: center !important;
+        border-radius: 20px !important;
+    }
+
+    .cta-title {
+        font-size: 1.65rem !important;
+        line-height: 1.35 !important;
+    }
+
+    .cta-subtitle {
+        font-size: 0.98rem !important;
+        line-height: 1.7 !important;
+    }
+
+    .footer {
+        padding: 45px 0 20px !important;
+        text-align: center !important;
+    }
+
+    .footer-contact p,
+    .contact-item {
+        justify-content: center !important;
+    }
+
+    .social-links {
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+        overflow-x: hidden !important;
+    }
+
+    .container,
+    .container-fluid {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    #navbar {
+        min-height: 64px !important;
+    }
+
+    .navbar-logo {
+        height: 38px !important;
+        width: auto !important;
+        margin-left: 0 !important;
+        margin-right: 8px !important;
+    }
+
+    .brand-text {
+        font-size: 0.9rem !important;
+        letter-spacing: 0.5px !important;
+    }
+
+    .navbar-toggler {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 6px 8px !important;
+    }
+
+    .hero-section {
+        padding: 92px 0 34px !important;
+        min-height: auto !important;
+        margin-top: 0 !important;
+    }
+
+    .hero-title {
+        font-size: 1.72rem !important;
+        line-height: 1.25 !important;
+        margin-bottom: 12px !important;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 20px !important;
+    }
+
+    .hero-buttons {
+        margin-top: 18px !important;
+        gap: 12px !important;
+    }
+
+    .hero-buttons .btn {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 13px 16px !important;
+        border-radius: 16px !important;
+        font-size: 0.95rem !important;
+    }
+
+    .hero-photo {
+        max-width: 88% !important;
+        max-height: 350px !important;
+        margin-top: 22px !important;
+        border-radius: 18px !important;
+        opacity: 0.9 !important;
+    }
+
+    .quick-stats {
+        padding-top: 32px !important;
+        padding-bottom: 32px !important;
+    }
+
+    .quick-stats .row > div {
+        margin-bottom: 14px !important;
+    }
+
+    .stat-card {
+        width: 100% !important;
+        padding: 24px 16px !important;
+        border-radius: 18px !important;
+    }
+
+    .stat-number {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .stat-label {
+        font-size: 0.92rem !important;
+        margin-top: 8px !important;
+    }
+
+    .featured-services,
+    .why-choose-us,
+    .services-section,
+    .about-section,
+    .vision-mission,
+    .core-values,
+    .timeline-section,
+    .contact-info-section,
+    .maps-section,
+    .social-media-section,
+    .consultation-info,
+    .consultation-form-section,
+    .articles-section,
+    .testimonials-section,
+    .testimonials-grid-section,
+    .stats-section {
+        padding-top: 48px !important;
+        padding-bottom: 48px !important;
+    }
+
+    .section-header {
+        margin-bottom: 2rem !important;
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+
+    .section-title {
+        font-size: 1.55rem !important;
+        line-height: 1.3 !important;
+    }
+
+    .section-subtitle {
+        font-size: 0.93rem !important;
+        line-height: 1.7 !important;
+    }
+
+    .title-underline {
+        width: 76px !important;
+        height: 3px !important;
+    }
+
+    .page-header {
+        min-height: 185px !important;
+        margin-top: 64px !important;
+        padding: 38px 15px !important;
+    }
+
+    .page-title {
+        font-size: 1.65rem !important;
+        line-height: 1.25 !important;
+    }
+
+    .page-subtitle {
+        font-size: 0.92rem !important;
+        line-height: 1.55 !important;
+    }
+
+    .service-card h4,
+    .service-title,
+    .service-detailed-title {
+        font-size: 1.12rem !important;
+        line-height: 1.4 !important;
+    }
+
+    .service-card p,
+    .service-desc,
+    .service-detailed-desc {
+        font-size: 0.9rem !important;
+        line-height: 1.7 !important;
+    }
+
+    .service-card-img {
+        height: 175px !important;
+    }
+
+    .service-features {
+        font-size: 0.88rem !important;
+    }
+
+    .why-item,
+    .guide-step {
+        gap: 0.9rem !important;
+        align-items: flex-start !important;
+    }
+
+    .why-icon {
+        font-size: 1.4rem !important;
+        min-width: 24px !important;
+    }
+
+    .why-text h5 {
+        font-size: 1rem !important;
+    }
+
+    .why-text p {
+        font-size: 0.9rem !important;
+        line-height: 1.65 !important;
+    }
+
+    .about-content {
+        text-align: center !important;
+    }
+
+    .about-content p {
+        font-size: 0.93rem !important;
+        line-height: 1.75 !important;
+    }
+
+    .about-highlights {
+        text-align: left !important;
+    }
+
+    .highlight-item {
+        padding-left: 1rem !important;
+    }
+
+    .article-content {
+        padding: 18px !important;
+    }
+
+    .article-title {
+        font-size: 1.05rem !important;
+        line-height: 1.4 !important;
+    }
+
+    .article-excerpt {
+        font-size: 0.9rem !important;
+        line-height: 1.7 !important;
+    }
+
+    .article-meta {
+        font-size: 0.78rem !important;
+        gap: 0.6rem !important;
+    }
+
+    .testimonial-card {
+        padding: 26px 18px !important;
+    }
+
+    .testimonial-content {
+        font-size: 0.93rem !important;
+        line-height: 1.7 !important;
+        margin: 1.4rem 0 !important;
+    }
+
+    .testimonial-grid-card {
+        padding: 22px 18px !important;
+    }
+
+    .contact-info-card,
+    .info-card,
+    .value-card,
+    .vision-mission-card {
+        padding: 22px 18px !important;
+    }
+
+    .form-control,
+    .form-select {
+        min-height: 48px !important;
+        padding: 12px 14px !important;
+        font-size: 0.95rem !important;
+        border-radius: 12px !important;
+    }
+
+    textarea.form-control {
+        min-height: 110px !important;
+    }
+
+    .form-label,
+    .form-check-label {
+        font-size: 0.9rem !important;
+        line-height: 1.6 !important;
+    }
+
+    .maps-embed iframe {
+        height: 280px !important;
+    }
+
+    .address-info {
+        text-align: center !important;
+    }
+
+    .cta-section .btn,
+    .address-info .btn,
+    .subscribe-form .btn {
+        width: 100% !important;
+    }
+
+    .subscribe-form,
+    .subscribe-input-group {
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+
+    .subscribe-form .form-control,
+    .subscribe-input-group .form-control,
+    .subscribe-input-group .btn {
+        width: 100% !important;
+        border-radius: 12px !important;
+    }
+
+    .footer-logo {
+        height: 48px !important;
+    }
+
+    .footer-description,
+    .footer-links a,
+    .footer-contact p,
+    .footer-bottom p {
+        font-size: 0.88rem !important;
+        line-height: 1.7 !important;
+    }
+
+    .whatsapp-float {
+        width: 52px !important;
+        height: 52px !important;
+        right: 18px !important;
+        bottom: 18px !important;
+        font-size: 1.3rem !important;
+        z-index: 999 !important;
+    }
+
+    .back-to-top {
+        width: 44px !important;
+        height: 44px !important;
+        right: 22px !important;
+        bottom: 82px !important;
+        font-size: 1rem !important;
+    }
+
+    .glass:hover,
+    .service-card:hover,
+    .service-detailed-card:hover,
+    .article-card:hover,
+    .testimonial-card:hover {
+        transform: none !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .container,
+    .container-fluid {
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+    .hero-section {
+        padding-top: 88px !important;
+        padding-bottom: 30px !important;
+    }
+
+    .hero-title {
+        font-size: 1.55rem !important;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem !important;
+    }
+
+    .hero-photo {
+        max-width: 86% !important;
+        max-height: 320px !important;
+    }
+
+    .section-title {
+        font-size: 1.42rem !important;
+    }
+
+    .page-title {
+        font-size: 1.5rem !important;
+    }
+
+    .service-card-img {
+        height: 160px !important;
+    }
+
+    .article-image-wrapper {
+        height: 165px !important;
+    }
+
+    .btn {
+        font-size: 0.9rem !important;
+    }
+}
