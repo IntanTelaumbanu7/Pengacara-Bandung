@@ -4,12 +4,14 @@
 {% block meta_description %}Hubungi Kantor Hukum Arman Telaumbanua melalui berbagai saluran komunikasi untuk konsultasi dan layanan hukum profesional.{% endblock %}
 
 {% block content %}
+
 <!-- Page Header -->
-<section class="page-header" style="background-image: url('{{ url_for('static', filename='img/bg.jpg') }}');">
+<section class="page-header" style="background-image: url('{{ url_for('static', filename='img/lawyer.jpeg') }}');">
     <div class="page-header-overlay"></div>
-    <div class="container h-100">
-        <div class="row h-100 align-items-center justify-content-center">
-            <div class="col-lg-8 text-center">
+
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-8 col-12 text-center">
                 <h1 class="page-title">Hubungi Kami</h1>
                 <p class="page-subtitle">Kami siap membantu Anda kapan saja</p>
             </div>
@@ -20,72 +22,103 @@
 <!-- Contact Info Section -->
 <section class="contact-info-section py-5">
     <div class="container">
-        <div class="row g-4 mb-5">
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="contact-info-card glass text-center">
+
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title">Informasi Kontak</h2>
+            <div class="title-underline"></div>
+            <p class="section-subtitle">
+                Pilih cara termudah untuk menghubungi kantor hukum kami.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="100">
+                <div class="contact-info-card glass text-center h-100">
                     <div class="contact-icon">
                         <i class="fas fa-phone"></i>
                     </div>
+
                     <h5 class="mt-3 text-gold">Telepon</h5>
+
                     <p>
-                        <a href="tel:+6285372163887">+62 853-7216-3887</a>
+                        <a href="tel:+6285372163887">
+                            +62 853-7216-3887
+                        </a>
                     </p>
+
                     <small>Senin - Sabtu: 08:00 - 17:00</small>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="contact-info-card glass text-center">
+            <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="contact-info-card glass text-center h-100">
                     <div class="contact-icon">
                         <i class="fab fa-whatsapp"></i>
                     </div>
+
                     <h5 class="mt-3 text-gold">WhatsApp</h5>
+
                     <p>
-                        <a href="https://wa.me/6285372163887?text=Halo%20Kantor%20Hukum%20ARMAN%20TELAUMBANUA%2C%20S.H.%2C%20M.H.%20Saya%20ingin%20melakukan%20konsultasi%20hukum." target="_blank">Chat WhatsApp</a>
+                        <a href="https://wa.me/6285372163887?text=Halo%20Kantor%20Hukum%20ARMAN%20TELAUMBANUA%2C%20S.H.%2C%20M.H.%20Saya%20ingin%20melakukan%20konsultasi%20hukum."
+                           target="_blank">
+                            Chat WhatsApp
+                        </a>
                     </p>
+
                     <small>Tersedia 24/7</small>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="contact-info-card glass text-center">
+            <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
+                <div class="contact-info-card glass text-center h-100">
                     <div class="contact-icon">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
+
                     <h5 class="mt-3 text-gold">Lokasi</h5>
-                    <p>Buah Batu Regency Blok A-2 No. 1</p>
-                    <small>Kujangsari, Kec. Bandung Kidul, Kota Bandung, Jawa Barat</small>
+
+                    <p>
+                        Buah Batu Regency Blok A-2 No. 1
+                    </p>
+
+                    <small>
+                        Kujangsari, Kec. Bandung Kidul, Kota Bandung, Jawa Barat
+                    </small>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                <div class="contact-info-card glass text-center">
+            <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
+                <div class="contact-info-card glass text-center h-100">
                     <div class="contact-icon">
                         <i class="fas fa-envelope"></i>
                     </div>
+
                     <h5 class="mt-3 text-gold">Email</h5>
+
                     <p>
-                        <a href="mailto:info@armanlawyer.com">arman7elaumbanua@gmail.com</a>
+                        <a href="mailto:arman7elaumbanua@gmail.com">
+                            arman7elaumbanua@gmail.com
+                        </a>
                     </p>
+
                     <small>Respons dalam 24 jam</small>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
 
 <!-- Maps Section -->
 <section class="maps-section py-5 bg-dark">
-
     <div class="container">
 
-        <div class="row g-5 align-items-center">
+        <div class="row g-4 g-lg-5 align-items-center">
 
             <!-- GOOGLE MAPS -->
-            <div class="col-lg-6" data-aos="fade-right">
-
+            <div class="col-lg-6 col-12" data-aos="fade-right">
                 <div class="maps-embed glass">
-
                     <iframe
                         src="https://www.google.com/maps?q=Blok+A-2+No.+1,+Jl.+Buah+Batu+Regency,+Kujangsari,+Kec.+Bandung+Kidul,+Kota+Bandung,+Jawa+Barat+40375&output=embed"
                         width="100%"
@@ -94,175 +127,166 @@
                         allowfullscreen=""
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
-
                     </iframe>
-
                 </div>
-
             </div>
 
             <!-- ADDRESS -->
-            <div class="col-lg-6" data-aos="fade-left">
-
-                <div class="address-info">
+            <div class="col-lg-6 col-12" data-aos="fade-left">
+                <div class="address-info glass p-4 p-md-5">
 
                     <h3 class="mb-4 text-gold">
                         Alamat Lengkap
                     </h3>
 
-                    <!-- ALAMAT BISA DIKLIK -->
                     <a href="https://www.google.com/maps?client=ms-android-vivo-rev1&hs=WTc&sca_esv=c8eb75afdfd45061&hl=in-ID&cs=0&kgmid=/g/11vzsgtm9q&shem=rimspwouoe&shndl=30&kgs=26928dc87b17a88a&um=1&ie=UTF-8&fb=1&gl=id&sa=X&geocode=KTfguh3h6WguMSdXvz1tCeKM&daddr=Blok+A-2+No.+1,+Jl.+Buah+Batu+Regency,+Kujangsari,+Kec.+Bandung+Kidul,+Kota+Bandung,+Jawa+Barat+40375"
                        target="_blank"
                        class="location-link">
 
                         <p class="mb-4">
-
                             <i class="fas fa-map-marker-alt me-2 text-gold"></i>
-
                             Blok A-2 No. 1<br>
                             Jl. Buah Batu Regency<br>
-                            Kujangsari<br>
-                            Kecamatan Bandung Kidul<br>
-                            Kota Bandung<br>
-                            Jawa Barat 40375
-
+                            Kujangsari, Kecamatan Bandung Kidul<br>
+                            Kota Bandung, Jawa Barat 40375
                         </p>
 
                     </a>
 
-                    <!-- BUTTON MAPS -->
-                    <a href="https://www.google.com/maps?client=ms-android-vivo-rev1&hs=WTc&sca_esv=c8eb75afdfd45061&hl=in-ID&cs=0&kgmid=/g/11vzsgtm9q&shem=rimspwouoe&shndl=30&kgs=26928dc87b17a88a&um=1&ie=UTF-8&fb=1&gl=id&sa=X&geocode=KTfguh3h6WguMSdXvz1tCeKM&daddr=Blok+A-2+No.+1,+Jl.+Buah+Batu+Regency,+Kujangsari,+Kec.+Bandung+Kidul,+Kota+Bandung,+Jawa+Barat+40375"
-                       target="_blank"
-                       class="btn btn-outline-gold">
+                    <div class="d-flex flex-column flex-md-row gap-3">
 
-                        <i class="fas fa-directions me-2"></i>
-                        Buka di Google Maps
+                        <a href="https://www.google.com/maps?client=ms-android-vivo-rev1&hs=WTc&sca_esv=c8eb75afdfd45061&hl=in-ID&cs=0&kgmid=/g/11vzsgtm9q&shem=rimspwouoe&shndl=30&kgs=26928dc87b17a88a&um=1&ie=UTF-8&fb=1&gl=id&sa=X&geocode=KTfguh3h6WguMSdXvz1tCeKM&daddr=Blok+A-2+No.+1,+Jl.+Buah+Batu+Regency,+Kujangsari,+Kec.+Bandung+Kidul,+Kota+Bandung,+Jawa+Barat+40375"
+                           target="_blank"
+                           class="btn btn-outline-gold">
 
-                    </a>
+                            <i class="fas fa-directions me-2"></i>
+                            Buka Google Maps
+
+                        </a>
+
+                        <a href="https://wa.me/6285372163887?text=Halo%20Kantor%20Hukum%20ARMAN%20TELAUMBANUA%2C%20S.H.%2C%20M.H.%20Saya%20ingin%20bertanya%20lokasi%20kantor."
+                           target="_blank"
+                           class="btn btn-gold">
+
+                            <i class="fab fa-whatsapp me-2"></i>
+                            Tanya Lokasi
+
+                        </a>
+
+                    </div>
 
                 </div>
-
             </div>
 
         </div>
 
     </div>
-
 </section>
 
-<!-- CSS -->
-<style>
-
-.location-link{
-    color: #ffffff;
-    text-decoration: none;
-    transition: 0.3s ease;
-}
-
-.location-link:hover{
-    color: #d4af37;
-}
-
-.location-link p{
-    margin-bottom: 0;
-}
-
-</style>
-
 <!-- Social Media Section -->
-<section class="social-media-section py-5 bg-dark">
+<section class="social-media-section py-5">
     <div class="container">
 
         <div class="section-header text-center mb-5" data-aos="fade-up">
             <h2 class="section-title">Ikuti Media Sosial Kami</h2>
             <div class="title-underline"></div>
+            <p class="section-subtitle">
+                Dapatkan informasi dan update terbaru melalui media sosial kami.
+            </p>
         </div>
 
-        <div class="row justify-content-center">
+        <div class="row justify-content-center g-3">
 
-            <!-- Instagram -->
-            <div class="col-auto" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-6 col-md-auto" data-aos="zoom-in" data-aos-delay="100">
                 <a href="https://www.instagram.com/armanlawyer96?igsh=Zzhkb2p4c3EzNzAw"
                    target="_blank"
-                   class="social-icon">
-
+                   class="social-icon d-flex align-items-center justify-content-center">
                     <i class="fab fa-instagram"></i>
-
                 </a>
             </div>
 
-            <!-- Facebook -->
-            <div class="col-auto" data-aos="zoom-in" data-aos-delay="200">
+            <div class="col-6 col-md-auto" data-aos="zoom-in" data-aos-delay="200">
                 <a href="https://www.facebook.com/arman.telaumbanua.92"
                    target="_blank"
-                   class="social-icon">
-
+                   class="social-icon d-flex align-items-center justify-content-center">
                     <i class="fab fa-facebook-f"></i>
-
                 </a>
             </div>
 
-            <!-- WhatsApp -->
-            <div class="col-auto" data-aos="zoom-in" data-aos-delay="300">
+            <div class="col-6 col-md-auto" data-aos="zoom-in" data-aos-delay="300">
                 <a href="https://wa.me/6285372163887?text=Halo%20Kantor%20Hukum%20ARMAN%20TELAUMBANUA%2C%20S.H.%2C%20M.H.%20Saya%20ingin%20melakukan%20konsultasi%20hukum."
                    target="_blank"
-                   class="social-icon">
-
+                   class="social-icon d-flex align-items-center justify-content-center">
                     <i class="fab fa-whatsapp"></i>
-
                 </a>
             </div>
 
-            <!-- TikTok -->
-            <div class="col-auto" data-aos="zoom-in" data-aos-delay="400">
+            <div class="col-6 col-md-auto" data-aos="zoom-in" data-aos-delay="400">
                 <a href="https://www.tiktok.com/@adv_arman?_r=1&_t=ZS-96YowIEQpzp"
                    target="_blank"
-                   class="social-icon">
-
+                   class="social-icon d-flex align-items-center justify-content-center">
                     <i class="fab fa-tiktok"></i>
-
                 </a>
             </div>
 
         </div>
+
     </div>
 </section>
 
-{% endblock %}
+<style>
+.location-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
 
-{% block extra_js %}
-<script>
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        subject: document.getElementById('subject').value,
-        message: document.getElementById('message').value
-    };
-    
-    fetch('/api/submit-contact', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            alert('Pesan berhasil dikirim! Terima kasih telah menghubungi kami.');
-            document.getElementById('contactForm').reset();
-        } else {
-            alert('Terjadi kesalahan. Silakan coba lagi.');
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Terjadi kesalahan. Silakan coba lagi.');
-    });
-});
-</script>
+.location-link:hover {
+    color: #d4af37;
+}
+
+.location-link p {
+    margin-bottom: 0;
+}
+
+.social-icon {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    color: #d4af37;
+    font-size: 1.7rem;
+    text-decoration: none;
+    transition: 0.3s ease;
+    margin: auto;
+}
+
+.social-icon:hover {
+    background: #d4af37;
+    color: #0a0e27;
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .maps-embed iframe {
+        height: 280px;
+    }
+
+    .address-info {
+        text-align: center;
+    }
+
+    .address-info .btn {
+        width: 100%;
+    }
+
+    .social-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+}
+</style>
+
 {% endblock %}
