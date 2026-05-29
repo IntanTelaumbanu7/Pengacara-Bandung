@@ -119,8 +119,62 @@ services_data = [
     }
 ]
 
-articles_data = []
-testimonials_data = []
+articles_data = [
+    {
+        'id': 1,
+        'title': 'Pentingnya Konsultasi Hukum Sebelum Mengambil Keputusan',
+        'category': 'Konsultasi Hukum',
+        'date': '2026-05-29',
+        'author': 'Kantor Hukum Arman',
+        'thumbnail': 'https://www.perajanusa.id/wp-content/uploads/2019/07/Pengacara-hukum.jpg',
+        'excerpt': 'Konsultasi hukum membantu masyarakat memahami risiko, hak, dan langkah yang tepat sebelum mengambil keputusan penting.'
+    },
+    {
+        'id': 2,
+        'title': 'Langkah Awal Jika Menghadapi Sengketa Tanah',
+        'category': 'Sengketa Tanah',
+        'date': '2026-05-29',
+        'author': 'Kantor Hukum Arman',
+        'thumbnail': 'https://remax.co.id/_next/image?url=https%3A%2F%2Fremax-files-pr0d.s3.ap-southeast-1.amazonaws.com%2Fremax%2Farticles%2F9f07169c-3de2-44ff-a392-829f392c9e03.jpg&w=3840&q=75',
+        'excerpt': 'Sengketa tanah perlu ditangani dengan bukti dokumen yang kuat, kronologi jelas, dan pendampingan hukum yang tepat.'
+    },
+    {
+        'id': 3,
+        'title': 'Memahami Perbedaan Hukum Pidana dan Perdata',
+        'category': 'Edukasi Hukum',
+        'date': '2026-05-29',
+        'author': 'Kantor Hukum Arman',
+        'thumbnail': 'https://pusatdapodik.com/wp-content/uploads/2024/01/Hukum-Pidana.jpg',
+        'excerpt': 'Hukum pidana dan perdata memiliki tujuan, proses, dan akibat hukum yang berbeda. Masyarakat perlu memahami perbedaannya.'
+    }
+]
+
+testimonials_data = [
+    {
+        'id': 1,
+        'name': 'Klien Google Maps',
+        'position': 'Klien Konsultasi',
+        'company': 'Bandung',
+        'rating': 5,
+        'content': 'Pelayanan konsultasi hukumnya sangat membantu, penjelasannya jelas, dan prosesnya profesional.'
+    },
+    {
+        'id': 2,
+        'name': 'Klien Google Maps',
+        'position': 'Klien Pendampingan',
+        'company': 'Bandung',
+        'rating': 5,
+        'content': 'Respon cepat dan arahan hukumnya mudah dipahami. Sangat membantu dalam mengambil keputusan.'
+    },
+    {
+        'id': 3,
+        'name': 'Klien Google Maps',
+        'position': 'Klien Hukum',
+        'company': 'Bandung',
+        'rating': 5,
+        'content': 'Kantor hukum terpercaya, komunikatif, dan memberikan solusi yang sesuai dengan kebutuhan klien.'
+    }
+]
 
 @app.route('/')
 def index():
