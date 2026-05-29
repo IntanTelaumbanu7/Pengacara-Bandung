@@ -1,32 +1,24 @@
+```html
 {% extends "base.html" %}
 
 {% block title %}Layanan - Kantor Hukum Arman Telaumbanua{% endblock %}
-{% block meta_description %}Layanan hukum profesional kami meliputi hukum pidana, perdata, keluarga, bisnis, pertanahan, ketenagakerjaan, perbankan, tata usaha negara, dan berbagai kebutuhan hukum lainnya.{% endblock %}
+
+{% block meta_description %}
+Layanan hukum profesional kami meliputi hukum pidana, perdata, keluarga, bisnis, pertanahan, dan berbagai kebutuhan hukum lainnya.
+{% endblock %}
 
 {% block content %}
 
-<!-- Page Header -->
-<section class="page-header" style="background-image: url('{{ url_for('static', filename='img/bg.jpg') }}');">
-    <div class="page-header-overlay"></div>
+<!-- PAGE HEADER -->
+<section class="page-header"
+         style="background-image: url('{{ url_for('static', filename='img/lawyer.jpeg') }}');">
 
-    <div class="container h-100">
-        <div class="row h-100 align-items-center justify-content-center">
-            <div class="col-lg-8 text-center">
-
-                <h1 class="page-title">
-                    Layanan Kami{% extends "base.html" %}
-
-{% block title %}Layanan - Kantor Hukum Arman Telaumbanua{% endblock %}
-{% block meta_description %}Layanan hukum profesional kami meliputi hukum pidana, perdata, keluarga, bisnis, pertanahan, ketenagakerjaan, perbankan, tata usaha negara, dan berbagai kebutuhan hukum lainnya.{% endblock %}
-
-{% block content %}
-
-<!-- Page Header -->
-<section class="page-header" style="background-image: url('{{ url_for('static', filename='img/lawyer.jpeg') }}');">
     <div class="page-header-overlay"></div>
 
     <div class="container">
+
         <div class="row align-items-center justify-content-center">
+
             <div class="col-lg-8 col-12 text-center">
 
                 <h1 class="page-title">
@@ -38,15 +30,20 @@
                 </p>
 
             </div>
+
         </div>
+
     </div>
+
 </section>
 
-<!-- Services Grid -->
+<!-- SERVICES -->
 <section class="services-section py-5">
+
     <div class="container">
 
         <div class="section-header text-center mb-5" data-aos="fade-up">
+
             <h2 class="section-title">
                 Daftar Lengkap Layanan Kami
             </h2>
@@ -54,8 +51,9 @@
             <div class="title-underline"></div>
 
             <p class="section-subtitle">
-                Kami menyediakan berbagai layanan hukum dengan pendekatan profesional dan solusi terpercaya
+                Kami menyediakan berbagai layanan hukum dengan pendekatan profesional dan terpercaya.
             </p>
+
         </div>
 
         <div class="row g-4 justify-content-center">
@@ -106,6 +104,7 @@
                             </p>
 
                             <ul class="service-features text-start">
+
                                 <li>
                                     <i class="fas fa-check text-gold me-2"></i>
                                     Konsultasi Profesional
@@ -120,9 +119,10 @@
                                     <i class="fas fa-check text-gold me-2"></i>
                                     Solusi Cepat & Efisien
                                 </li>
+
                             </ul>
 
-                            <a href="https://wa.me/6285372163887?text=Halo%20Pak%20Arman%2C%20saya%20ingin%20konsultasi%20terkait%20{{ service.title | urlencode }}.%20Saya%20mohon%20bantuan%20dan%20arahan%20hukum%20yang%20tepat.%20Terima%20kasih."
+                            <a href="https://wa.me/6285372163887?text=Halo%20Pak%20Arman,%20saya%20ingin%20konsultasi%20hukum.%20Mohon%20bantuannya."
                                target="_blank"
                                class="btn btn-gold btn-sm mt-3 w-100">
 
@@ -144,10 +144,12 @@
         </div>
 
     </div>
+
 </section>
 
-<!-- CTA Section -->
+<!-- CTA SECTION -->
 <section class="cta-section py-5">
+
     <div class="container">
 
         <div class="text-center" data-aos="zoom-in">
@@ -170,7 +172,7 @@
 
                 </a>
 
-                <a href="https://wa.me/6285372163887?text=Halo%20Kantor%20Hukum%20ARMAN%20TELAUMBANUA%2C%20S.H.%2C%20M.H.%20Saya%20ingin%20melakukan%20konsultasi%20hukum."
+                <a href="https://wa.me/6285372163887"
                    target="_blank"
                    class="btn btn-outline-gold btn-lg">
 
@@ -184,162 +186,8 @@
         </div>
 
     </div>
-</section>
-
-{% endblock %}
-                </h1>
-
-                <p class="page-subtitle">
-                    Solusi hukum profesional untuk semua kebutuhan Anda
-                </p>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Services Grid -->
-<section class="services-section py-5">
-
-    <div class="container">
-
-        <div class="section-header text-center mb-5" data-aos="fade-up">
-
-            <h2 class="section-title">
-                Daftar Lengkap Layanan Kami
-            </h2>
-
-            <div class="title-underline"></div>
-
-            <p class="section-subtitle">
-                Kami menyediakan berbagai layanan hukum dengan pendekatan profesional dan solusi terpercaya
-            </p>
-
-        </div>
-
-        <div class="row g-4">
-
-            {% for service in services %}
-
-            <div class="col-lg-4 col-md-6"
-                 data-aos="fade-up"
-                 data-aos-delay="{{ loop.index0 * 100 }}">
-
-                <div class="service-detailed-card glass">
-
-                    <!-- IMAGE -->
-                    <a href="#detail{{ service.id }}"
-                       data-bs-toggle="collapse"
-                       class="service-image-link">
-
-                        <img src="{{ service.image }}"
-                             alt="{{ service.title }}"
-                             class="service-card-img">
-
-                    </a>
-
-                    <!-- CONTENT -->
-                    <div class="service-detailed-content text-center">
-
-                        <!-- TITLE -->
-                        <a href="#detail{{ service.id }}"
-                           data-bs-toggle="collapse"
-                           class="service-title-link">
-
-                            <h4 class="service-detailed-title">
-                                {{ service.title }}
-                            </h4>
-
-                        </a>
-
-                        <!-- DETAIL -->
-                        <div class="collapse mt-3"
-                             id="detail{{ service.id }}">
-
-                            <p class="service-detailed-desc">
-                                {{ service.description }}
-                            </p>
-
-                            <ul class="service-features">
-
-                                <li>
-                                    <i class="fas fa-check text-gold me-2"></i>
-                                    Konsultasi Profesional
-                                </li>
-
-                                <li>
-                                    <i class="fas fa-check text-gold me-2"></i>
-                                    Pendampingan Hukum
-                                </li>
-
-                                <li>
-                                    <i class="fas fa-check text-gold me-2"></i>
-                                    Solusi Cepat & Efisien
-                                </li>
-
-                            </ul>
-
-                            <a href="https://wa.me/6285372163887?text=Halo%20Pak%20Arman%2C%20saya%20ingin%20konsultasi%20terkait%20{{ service.title | urlencode }}.%20Saya%20mohon%20bantuan%20dan%20arahan%20hukum%20yang%20tepat.%20Terima%20kasih."
-                            target="_blank"
-                            class="btn btn-gold btn-sm mt-3">
-
-                                <i class="fab fa-whatsapp me-2"></i>
-                                Konsultasi Sekarang
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            {% endfor %}
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- CTA Section -->
-<section class="cta-section py-5">
-
-    <div class="container">
-
-        <div class="text-center" data-aos="zoom-in">
-
-            <h2 class="cta-title">
-                Layanan Apa yang Anda Butuhkan?
-            </h2>
-
-            <p class="cta-subtitle mb-5">
-                Hubungi kami sekarang untuk konsultasi dan pendampingan hukum terbaik
-            </p>
-
-            <a href="/consultation"
-               class="btn btn-gold btn-lg me-3">
-
-                <i class="fas fa-calendar-check me-2"></i>
-                Jadwalkan Konsultasi
-
-            </a>
-
-            <a href="https://wa.me/6285372163887?text=Halo%20Kantor%20Hukum%20ARMAN%20TELAUMBANUA%2C%20S.H.%2C%20M.H.%20Saya%20ingin%20melakukan%20konsultasi%20hukum."
-               target="_blank"
-               class="btn btn-outline-gold btn-lg">
-
-                <i class="fab fa-whatsapp me-2"></i>
-                Hubungi WhatsApp
-
-            </a>
-
-        </div>
-
-    </div>
 
 </section>
 
 {% endblock %}
+```
