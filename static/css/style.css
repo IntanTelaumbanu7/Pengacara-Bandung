@@ -2798,3 +2798,136 @@ section {
         font-size: 0.9rem !important;
     }
 }
+
+/* =========================================================
+   FINAL HEADER BACKGROUND FIX
+   ========================================================= */
+
+.page-header{
+    position: relative !important;
+    min-height: 360px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    overflow: hidden !important;
+
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+
+    /* fokus ke patung */
+    background-position: center right !important;
+
+    margin-top: 72px !important;
+}
+
+/* overlay elegan */
+.page-header-overlay{
+    position: absolute !important;
+    inset: 0 !important;
+
+    background:
+        linear-gradient(
+            rgba(5,10,35,0.72),
+            rgba(5,10,35,0.72)
+        ) !important;
+
+    z-index: 1 !important;
+}
+
+/* content */
+.page-header .container{
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+/* title */
+.page-title{
+    font-size: clamp(2rem,5vw,4rem) !important;
+    font-weight: 800 !important;
+
+    color: #d4af37 !important;
+
+    margin-bottom: 15px !important;
+
+    line-height: 1.2 !important;
+    letter-spacing: 1px !important;
+}
+
+/* subtitle */
+.page-subtitle{
+    font-size: 1.1rem !important;
+    color: #ffffff !important;
+
+    line-height: 1.7 !important;
+
+    max-width: 700px !important;
+    margin: auto !important;
+}
+
+/* navbar transparan elegan */
+#navbar{
+    background: rgba(5,10,35,0.92) !important;
+
+    backdrop-filter: blur(10px) !important;
+
+    border-bottom:
+        1px solid rgba(212,175,55,0.12) !important;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+    .page-header{
+
+        min-height: 240px !important;
+
+        padding:
+            45px 20px !important;
+
+        margin-top: 62px !important;
+
+        /* fokus tengah */
+        background-position: center center !important;
+
+        background-size: cover !important;
+    }
+
+    .page-title{
+
+        font-size: 2rem !important;
+
+        line-height: 1.25 !important;
+
+        margin-bottom: 10px !important;
+    }
+
+    .page-subtitle{
+
+        font-size: 0.95rem !important;
+
+        line-height: 1.6 !important;
+
+        padding: 0 10px !important;
+    }
+}
+
+/* HP KECIL */
+@media (max-width:480px){
+
+    .page-header{
+
+        min-height: 210px !important;
+    }
+
+    .page-title{
+
+        font-size: 1.7rem !important;
+    }
+
+    .page-subtitle{
+
+        font-size: 0.9rem !important;
+    }
+}
